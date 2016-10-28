@@ -168,11 +168,11 @@
             },
             {
                 "to": {
-                    "startLine": 32,
+                    "startLine": 37,
                     "startColumn": 4,
-                    "startOffset": 885,
+                    "startOffset": 1175,
                     "endColumn": 57,
-                    "endOffset": 938
+                    "endOffset": 1228
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\dimens.xml",
@@ -187,11 +187,11 @@
             },
             {
                 "to": {
-                    "startLine": 33,
+                    "startLine": 38,
                     "startColumn": 4,
-                    "startOffset": 943,
+                    "startOffset": 1233,
                     "endColumn": 55,
-                    "endOffset": 994
+                    "endOffset": 1284
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\dimens.xml",
@@ -206,11 +206,11 @@
             },
             {
                 "to": {
-                    "startLine": 34,
+                    "startLine": 39,
                     "startColumn": 4,
-                    "startOffset": 999,
+                    "startOffset": 1289,
                     "endColumn": 52,
-                    "endOffset": 1047
+                    "endOffset": 1337
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -225,11 +225,11 @@
             },
             {
                 "to": {
-                    "startLine": 35,
+                    "startLine": 40,
                     "startColumn": 4,
-                    "startOffset": 1052,
+                    "startOffset": 1342,
                     "endColumn": 54,
-                    "endOffset": 1102
+                    "endOffset": 1392
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -244,11 +244,11 @@
             },
             {
                 "to": {
-                    "startLine": 36,
+                    "startLine": 41,
                     "startColumn": 4,
-                    "startOffset": 1107,
+                    "startOffset": 1397,
                     "endColumn": 55,
-                    "endOffset": 1158
+                    "endOffset": 1448
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\analytics.xml",
@@ -263,11 +263,11 @@
             },
             {
                 "to": {
-                    "startLine": 37,
+                    "startLine": 42,
                     "startColumn": 4,
-                    "startOffset": 1163,
+                    "startOffset": 1453,
                     "endColumn": 55,
-                    "endOffset": 1214
+                    "endOffset": 1504
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -282,11 +282,11 @@
             },
             {
                 "to": {
-                    "startLine": 38,
+                    "startLine": 43,
                     "startColumn": 4,
-                    "startOffset": 1219,
+                    "startOffset": 1509,
                     "endColumn": 66,
-                    "endOffset": 1281
+                    "endOffset": 1571
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -301,11 +301,11 @@
             },
             {
                 "to": {
-                    "startLine": 39,
+                    "startLine": 44,
                     "startColumn": 4,
-                    "startOffset": 1286,
+                    "startOffset": 1576,
                     "endColumn": 60,
-                    "endOffset": 1342
+                    "endOffset": 1632
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -320,11 +320,11 @@
             },
             {
                 "to": {
-                    "startLine": 40,
+                    "startLine": 45,
                     "startColumn": 4,
-                    "startOffset": 1347,
+                    "startOffset": 1637,
                     "endColumn": 56,
-                    "endOffset": 1399
+                    "endOffset": 1689
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -339,11 +339,11 @@
             },
             {
                 "to": {
-                    "startLine": 41,
+                    "startLine": 46,
                     "startColumn": 4,
-                    "startOffset": 1404,
+                    "startOffset": 1694,
                     "endColumn": 67,
-                    "endOffset": 1467
+                    "endOffset": 1757
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -358,11 +358,11 @@
             },
             {
                 "to": {
-                    "startLine": 42,
+                    "startLine": 47,
                     "startColumn": 4,
-                    "startOffset": 1472,
+                    "startOffset": 1762,
                     "endColumn": 66,
-                    "endOffset": 1534
+                    "endOffset": 1824
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -377,11 +377,11 @@
             },
             {
                 "to": {
-                    "startLine": 43,
+                    "startLine": 48,
                     "startColumn": 4,
-                    "startOffset": 1539,
+                    "startOffset": 1829,
                     "endColumn": 70,
-                    "endOffset": 1605
+                    "endOffset": 1895
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -396,11 +396,11 @@
             },
             {
                 "to": {
-                    "startLine": 44,
+                    "startLine": 49,
                     "startColumn": 4,
-                    "startOffset": 1610,
+                    "startOffset": 1900,
                     "endColumn": 71,
-                    "endOffset": 1677
+                    "endOffset": 1967
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -415,11 +415,11 @@
             },
             {
                 "to": {
-                    "startLine": 45,
+                    "startLine": 50,
                     "startColumn": 4,
-                    "startOffset": 1682,
+                    "startOffset": 1972,
                     "endColumn": 82,
-                    "endOffset": 1760
+                    "endOffset": 2050
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -434,11 +434,11 @@
             },
             {
                 "to": {
-                    "startLine": 46,
+                    "startLine": 51,
                     "startColumn": 4,
-                    "startOffset": 1765,
+                    "startOffset": 2055,
                     "endColumn": 57,
-                    "endOffset": 1818
+                    "endOffset": 2108
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -453,11 +453,11 @@
             },
             {
                 "to": {
-                    "startLine": 47,
+                    "startLine": 52,
                     "startColumn": 4,
-                    "startOffset": 1823,
+                    "startOffset": 2113,
                     "endColumn": 57,
-                    "endOffset": 1876
+                    "endOffset": 2166
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -472,11 +472,11 @@
             },
             {
                 "to": {
-                    "startLine": 48,
+                    "startLine": 53,
                     "startColumn": 4,
-                    "startOffset": 1881,
+                    "startOffset": 2171,
                     "endColumn": 109,
-                    "endOffset": 1986
+                    "endOffset": 2276
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -491,11 +491,11 @@
             },
             {
                 "to": {
-                    "startLine": 49,
+                    "startLine": 54,
                     "startColumn": 4,
-                    "startOffset": 1991,
+                    "startOffset": 2281,
                     "endColumn": 159,
-                    "endOffset": 2146
+                    "endOffset": 2436
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -510,11 +510,11 @@
             },
             {
                 "to": {
-                    "startLine": 50,
+                    "startLine": 55,
                     "startColumn": 4,
-                    "startOffset": 2151,
+                    "startOffset": 2441,
                     "endColumn": 95,
-                    "endOffset": 2242
+                    "endOffset": 2532
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -529,11 +529,11 @@
             },
             {
                 "to": {
-                    "startLine": 51,
+                    "startLine": 56,
                     "startColumn": 4,
-                    "startOffset": 2247,
+                    "startOffset": 2537,
                     "endColumn": 105,
-                    "endOffset": 2348
+                    "endOffset": 2638
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -548,11 +548,11 @@
             },
             {
                 "to": {
-                    "startLine": 52,
+                    "startLine": 57,
                     "startColumn": 4,
-                    "startOffset": 2353,
+                    "startOffset": 2643,
                     "endColumn": 68,
-                    "endOffset": 2417
+                    "endOffset": 2707
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -567,11 +567,11 @@
             },
             {
                 "to": {
-                    "startLine": 53,
+                    "startLine": 58,
                     "startColumn": 4,
-                    "startOffset": 2422,
+                    "startOffset": 2712,
                     "endColumn": 59,
-                    "endOffset": 2477
+                    "endOffset": 2767
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -586,11 +586,11 @@
             },
             {
                 "to": {
-                    "startLine": 54,
+                    "startLine": 59,
                     "startColumn": 4,
-                    "startOffset": 2482,
+                    "startOffset": 2772,
                     "endColumn": 119,
-                    "endOffset": 2597
+                    "endOffset": 2887
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\strings.xml",
@@ -605,12 +605,12 @@
             },
             {
                 "to": {
-                    "startLine": 55,
+                    "startLine": 60,
                     "startColumn": 4,
-                    "startOffset": 2602,
-                    "endLine": 61,
+                    "startOffset": 2892,
+                    "endLine": 66,
                     "endColumn": 12,
-                    "endOffset": 2888
+                    "endOffset": 3178
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\styles.xml",
@@ -626,12 +626,12 @@
             },
             {
                 "to": {
-                    "startLine": 62,
+                    "startLine": 67,
                     "startColumn": 4,
-                    "startOffset": 2893,
-                    "endLine": 64,
+                    "startOffset": 3183,
+                    "endLine": 69,
                     "endColumn": 12,
-                    "endOffset": 3048
+                    "endOffset": 3338
                 },
                 "from": {
                     "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values\\styles.xml",

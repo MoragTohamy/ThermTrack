@@ -17,6 +17,32 @@ public final class R {
         public static final int units=0x7f080005;
     }
     public static final class attr {
+        /** <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>any</code></td><td>-1</td><td></td></tr>
+<tr><td><code>back</code></td><td>99</td><td></td></tr>
+<tr><td><code>front</code></td><td>98</td><td></td></tr>
+</table>
+         */
+        public static final int camera_id=0x7f010001;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int show_fps=0x7f010000;
     }
     public static final class bool {
         public static final int ga_autoActivityTracking=0x7f090000;
@@ -55,42 +81,45 @@ public final class R {
         public static final int topshow_l=0x7f02000f;
     }
     public static final class id {
-        public static final int ImageView01=0x7f0b0012;
-        public static final int Rel_Nocam=0x7f0b0011;
-        public static final int Rel_Splash=0x7f0b000e;
-        public static final int Rel_Temp_Cross=0x7f0b0009;
-        public static final int RelativeLayout_bar=0x7f0b0003;
-        public static final int StartOrStopSaveFrameRawData=0x7f0b000d;
-        public static final int button_not_accept=0x7f0b0023;
-        public static final int button_tofu=0x7f0b0021;
-        public static final int close_button=0x7f0b001b;
-        public static final int donwload_lay=0x7f0b001c;
-        public static final int hyperlikedText=0x7f0b0016;
-        public static final int imageButton_accept=0x7f0b0022;
-        public static final int imageView1=0x7f0b0008;
-        public static final int imageView2=0x7f0b0001;
-        public static final int imageView3=0x7f0b000f;
-        public static final int imageView6=0x7f0b0014;
-        public static final int imageView_barBck=0x7f0b0004;
-        public static final int imageView_tst=0x7f0b0006;
-        public static final int overlay_im=0x7f0b000a;
-        public static final int printScreen=0x7f0b000c;
-        public static final int progressBar_download=0x7f0b001e;
-        public static final int relativeLayout2=0x7f0b0000;
-        public static final int retry_button=0x7f0b001a;
-        public static final int retry_lay=0x7f0b0018;
-        public static final int setting_btn=0x7f0b0002;
-        public static final int small1=0x7f0b0005;
-        public static final int small2=0x7f0b0007;
-        public static final int terms_lay=0x7f0b0020;
-        public static final int textView2=0x7f0b0013;
-        public static final int textView3=0x7f0b0015;
-        public static final int textViewRetry=0x7f0b0019;
-        public static final int textView_perc=0x7f0b001f;
-        public static final int textView_rec=0x7f0b001d;
-        public static final int textView_serial=0x7f0b0010;
-        public static final int textView_temp=0x7f0b000b;
-        public static final int webView_terms=0x7f0b0017;
+        public static final int ImageView01=0x7f0b0015;
+        public static final int Rel_Nocam=0x7f0b0014;
+        public static final int Rel_Splash=0x7f0b0011;
+        public static final int Rel_Temp_Cross=0x7f0b000c;
+        public static final int RelativeLayout_bar=0x7f0b0006;
+        public static final int StartOrStopSaveFrameRawData=0x7f0b0010;
+        public static final int any=0x7f0b0000;
+        public static final int back=0x7f0b0001;
+        public static final int button_not_accept=0x7f0b0026;
+        public static final int button_tofu=0x7f0b0024;
+        public static final int close_button=0x7f0b001e;
+        public static final int donwload_lay=0x7f0b001f;
+        public static final int front=0x7f0b0002;
+        public static final int hyperlikedText=0x7f0b0019;
+        public static final int imageButton_accept=0x7f0b0025;
+        public static final int imageView1=0x7f0b000b;
+        public static final int imageView2=0x7f0b0004;
+        public static final int imageView3=0x7f0b0012;
+        public static final int imageView6=0x7f0b0017;
+        public static final int imageView_barBck=0x7f0b0007;
+        public static final int imageView_tst=0x7f0b0009;
+        public static final int overlay_im=0x7f0b000d;
+        public static final int printScreen=0x7f0b000f;
+        public static final int progressBar_download=0x7f0b0021;
+        public static final int relativeLayout2=0x7f0b0003;
+        public static final int retry_button=0x7f0b001d;
+        public static final int retry_lay=0x7f0b001b;
+        public static final int setting_btn=0x7f0b0005;
+        public static final int small1=0x7f0b0008;
+        public static final int small2=0x7f0b000a;
+        public static final int terms_lay=0x7f0b0023;
+        public static final int textView2=0x7f0b0016;
+        public static final int textView3=0x7f0b0018;
+        public static final int textViewRetry=0x7f0b001c;
+        public static final int textView_perc=0x7f0b0022;
+        public static final int textView_rec=0x7f0b0020;
+        public static final int textView_serial=0x7f0b0013;
+        public static final int textView_temp=0x7f0b000e;
+        public static final int webView_terms=0x7f0b001a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -142,4 +171,59 @@ public final class R {
         public static final int device_filter=0x7f040000;
         public static final int prefs=0x7f040001;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a CameraBridgeViewBase.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CameraBridgeViewBase_camera_id thermapp.sdk.sample:camera_id}</code></td><td></td></tr>
+           <tr><td><code>{@link #CameraBridgeViewBase_show_fps thermapp.sdk.sample:show_fps}</code></td><td></td></tr>
+           </table>
+           @see #CameraBridgeViewBase_camera_id
+           @see #CameraBridgeViewBase_show_fps
+         */
+        public static final int[] CameraBridgeViewBase = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link thermapp.sdk.sample.R.attr#camera_id}
+          attribute's value can be found in the {@link #CameraBridgeViewBase} array.
+
+
+          <p>May be an integer value, such as "<code>100</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+<p>May be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>any</code></td><td>-1</td><td></td></tr>
+<tr><td><code>back</code></td><td>99</td><td></td></tr>
+<tr><td><code>front</code></td><td>98</td><td></td></tr>
+</table>
+          @attr name thermapp.sdk.sample:camera_id
+        */
+        public static final int CameraBridgeViewBase_camera_id = 1;
+        /**
+          <p>This symbol is the offset where the {@link thermapp.sdk.sample.R.attr#show_fps}
+          attribute's value can be found in the {@link #CameraBridgeViewBase} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name thermapp.sdk.sample:show_fps
+        */
+        public static final int CameraBridgeViewBase_show_fps = 0;
+    };
 }

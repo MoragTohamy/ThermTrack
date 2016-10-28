@@ -17,6 +17,7 @@ ADDED from C:\Mobile\workspace\ThermTrack\app\src\main\AndroidManifest.xml:2:1-7
 		ADDED from C:\Mobile\workspace\ThermTrack\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
 ADDED from C:\Mobile\workspace\ThermTrack\app\src\main\AndroidManifest.xml:7:5-9:41
+MERGED from [ThermTrack:openCVLibrary310:unspecified] C:\Mobile\workspace\ThermTrack\app\build\intermediates\exploded-aar\ThermTrack\openCVLibrary310\unspecified\AndroidManifest.xml:7:5-9:41
 	android:targetSdkVersion
 		ADDED from C:\Mobile\workspace\ThermTrack\app\src\main\AndroidManifest.xml:9:9-38
 		INJECTED from C:\Mobile\workspace\ThermTrack\app\src\main\AndroidManifest.xml

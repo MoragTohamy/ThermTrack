@@ -44,10 +44,46 @@ import android.widget.Toast;
 
 import com.google.analytics.tracking.android.EasyTracker;
 
+import org.opencv.android.BaseLoaderCallback;
+import org.opencv.android.LoaderCallbackInterface;
+import org.opencv.android.OpenCVLoader;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
+
 import thermapp.sdk.sample.R;
 
 public class MainActivity extends Activity implements ThermAppAPI_Callback 
 {
+	private static final String  TAG = "ThermTrack::OpenCV::Activity";
+
+	private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
+		@Override
+		public void onManagerConnected(int status) {
+			switch(status) {
+				case LoaderCallbackInterface.SUCCESS:
+					Log.i(TAG,"OpenCV Manager Connected");
+					// Add image processing code here
+					Mat m = new Mat(5, 10, CvType.CV_8UC1);
+					break;
+				case LoaderCallbackInterface.INIT_FAILED:
+					Log.i(TAG,"Init Failed");
+					break;
+				case LoaderCallbackInterface.INSTALL_CANCELED:
+					Log.i(TAG,"Install Cancelled");
+					break;
+				case LoaderCallbackInterface.INCOMPATIBLE_MANAGER_VERSION:
+					Log.i(TAG,"Incompatible Version");
+					break;
+				case LoaderCallbackInterface.MARKET_ERROR:
+					Log.i(TAG,"Market Error");
+					break;
+				default:
+					Log.i(TAG,"OpenCV Manager Install");
+					super.onManagerConnected(status);
+					break;
+			}
+		}
+	};
 
 	private ThermAppAPI mDeviceSdk = null;
 	private Bitmap bmp_ptr = null;
@@ -56,6 +92,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 	int[] therm_palette;
 	int[] my_palette;
 	Matrix matrix_imrot_90;
+
 
 	private Runnable rnbl = new Runnable() 
 	{
@@ -231,6 +268,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 			}
 		}
 		super.onResume();
+		OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_9, this, mLoaderCallback);
 	}
 
 	private void CloseApp() 

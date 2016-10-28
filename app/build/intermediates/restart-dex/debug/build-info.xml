@@ -5,29 +5,29 @@
     density="xxxhdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="234249744260042"
+    timestamp="240220247195552"
     token="-7213015539023082927"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="1842" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="1500" />
     <task
         name="verifier"
-        duration="0" />
+        duration="329" />
 
     <artifact
         location="C:\Mobile\workspace\ThermTrack\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="234249744260042"
+        timestamp="240220247195552"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Mobile\workspace\ThermTrack\app\build\outputs\apk\app-debug.apk"

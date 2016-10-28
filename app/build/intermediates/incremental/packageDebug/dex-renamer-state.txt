@@ -1,0 +1,7 @@
+#Fri Oct 28 12:28:05 IDT 2016
+base.0=C\:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_9e8e73832408ee019c8dbdd5d422744638d88bf2
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_60186369b59dfc440678a6d8cabbe3d2f80c6cf4\\classes.dex
+base.1=C\:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_60186369b59dfc440678a6d8cabbe3d2f80c6cf4
+file.0=C\:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_9e8e73832408ee019c8dbdd5d422744638d88bf2\\classes.dex

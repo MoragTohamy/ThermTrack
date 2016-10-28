@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\xml\\device_filter.xml",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\xml\\device_filter.xml"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\xml\\prefs.xml",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\xml\\prefs.xml"
+    }
+]

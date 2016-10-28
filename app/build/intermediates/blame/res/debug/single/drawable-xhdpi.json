@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\topshow.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\topshow.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\plus_icon.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\plus_icon.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\topshow_l.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\topshow_l.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\logo_sdk.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\logo_sdk.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\night_vision_t.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\night_vision_t.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\background.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\accept.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\accept.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\minus_icon.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\minus_icon.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\cursor.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\cursor.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\settings.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\settings.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\night_vision_nt.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\night_vision_nt.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\logo_sdk_inner.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\logo_sdk_inner.png"
+    }
+]

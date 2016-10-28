@@ -1,0 +1,197 @@
+[
+    {
+        "outputFile": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-xhdpi-v4\\values-xhdpi-v4.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 44,
+                    "endOffset": 95
+                },
+                "from": {
+                    "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 16,
+                        "startColumn": 3,
+                        "startOffset": 535,
+                        "endColumn": 43,
+                        "endOffset": 575
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 100,
+                    "endColumn": 40,
+                    "endOffset": 136
+                },
+                "from": {
+                    "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 3,
+                        "startOffset": 233,
+                        "endColumn": 39,
+                        "endOffset": 269
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 141,
+                    "endColumn": 47,
+                    "endOffset": 184
+                },
+                "from": {
+                    "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 442,
+                        "endColumn": 47,
+                        "endOffset": 485
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 5,
+                    "startColumn": 4,
+                    "startOffset": 189,
+                    "endColumn": 43,
+                    "endOffset": 228
+                },
+                "from": {
+                    "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 491,
+                        "endColumn": 43,
+                        "endOffset": 530
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 233,
+                    "endColumn": 46,
+                    "endOffset": 275
+                },
+                "from": {
+                    "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 347,
+                        "endColumn": 46,
+                        "endOffset": 389
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 280,
+                    "endColumn": 44,
+                    "endOffset": 320
+                },
+                "from": {
+                    "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 3,
+                        "startOffset": 61,
+                        "endColumn": 43,
+                        "endOffset": 101
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 325,
+                    "endColumn": 44,
+                    "endOffset": 365
+                },
+                "from": {
+                    "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 3,
+                        "startOffset": 106,
+                        "endColumn": 43,
+                        "endOffset": 146
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 370,
+                    "endColumn": 40,
+                    "endOffset": 406
+                },
+                "from": {
+                    "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 3,
+                        "startOffset": 192,
+                        "endColumn": 39,
+                        "endOffset": 228
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 411,
+                    "endColumn": 40,
+                    "endOffset": 447
+                },
+                "from": {
+                    "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 3,
+                        "startOffset": 274,
+                        "endColumn": 39,
+                        "endOffset": 310
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 452,
+                    "endColumn": 46,
+                    "endOffset": 494
+                },
+                "from": {
+                    "file": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\values-xhdpi\\dimens.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 3,
+                        "startOffset": 394,
+                        "endColumn": 45,
+                        "endOffset": 436
+                    }
+                }
+            }
+        ]
+    }
+]

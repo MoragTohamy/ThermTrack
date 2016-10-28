@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lmon_col">
+        <item>1</item>
+        <item>2</item>
+       
+     </string-array>
+    <string-array name="lpalette">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+     </string-array>
+    <string-array name="lunits">
+        <item>F</item>
+        <item>C</item>
+     </string-array>
+    <string-array name="mon_col">
+        <item>Night Vision</item>
+        <item>Thermography</item>
+        
+      </string-array>
+    <string-array name="palette">
+        <item>Rainbow</item>
+        <item>Gray</item>
+        <item>Iron</item>
+      </string-array>
+    <string-array name="units">
+        <item>Fahrenheit</item>
+        <item>Celsius</item>
+      </string-array>
+    <bool name="ga_autoActivityTracking">true</bool>
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <string name="action_settings">Settings</string>
+    <string name="app_name">ThermAppSDKSample</string>
+    <string name="ga_trackingId">UA-46878345-2</string>
+    <string name="title_activity_ac_tst">AcTST</string>
+    <string name="title_activity_ftpdownload">FTPDownload</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_slpash">Slpash</string>
+    <string name="title_activity_splah_screen">SplahScreen</string>
+    <string name="title_activity_terms_of_use">TermsOfUse</string>
+    <string name="welcome_download_text_lower">Please wait...</string>
+    <string name="welcome_download_text_upper">Initializing...</string>
+    <string name="welcome_download_text_upper_downloading">Downloading...</string>
+    <string name="welcome_retry_btn_close">Close</string>
+    <string name="welcome_retry_btn_retry">Retry</string>
+    <string name="welcome_retry_text">Download Failed!\nProblem communicating with ThermApp servers.</string>
+    <string name="welcome_retry_text_no_internet">Download Failed!\nNo internet connection available.\n Internet is needed to complete initialization.</string>
+    <string name="welcome_retry_text_unrecognized_begin">Download Failed!\nYour device</string>
+    <string name="welcome_retry_text_unrecognized_end">is unrecognized.\nPlease contact support.</string>
+    <string name="welcome_terms_decline">I do not accept it</string>
+    <string name="welcome_terms_text">Terms of Use</string>
+    <string name="welcome_terms_welcome">Welcome to Therm-App.\n Before we can get started\nplease approve our</string>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>

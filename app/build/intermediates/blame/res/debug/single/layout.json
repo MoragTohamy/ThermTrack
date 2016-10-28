@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_welcome.xml",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_terms_of_use.xml",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\layout\\activity_terms_of_use.xml"
+    }
+]

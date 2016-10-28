@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.2"
+    compileOptions.encoding = 'windows-1251'
+    
+    sourceSets.main {
+        jniLibs.srcDir 'libs'
+        jni.srcDirs = []
+    }
+
+    defaultConfig {
+        applicationId "thermapp.sdk.sample"
+        minSdkVersion 16
+        targetSdkVersion 22
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile files('libs/libGoogleAnalyticsServices.jar')
+    compile files('libs/thermappsdk.jar')
+}

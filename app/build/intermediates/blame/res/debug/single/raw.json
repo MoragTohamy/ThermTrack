@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\raw\\thermappsdk_ipd.bc",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\raw\\thermappsdk_ipd.bc"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\raw\\thermappsdk_ipn.bc",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\raw\\thermappsdk_ipn.bc"
+    }
+]

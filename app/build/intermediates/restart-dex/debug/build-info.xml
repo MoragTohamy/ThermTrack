@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="23"
-    density="xxxhdpi"
+    abi="armeabi-v7a,armeabi"
+    api-level="16"
+    density="mdpi"
     format="8"
     plugin-version="2.2.2"
-    timestamp="240220247195552"
+    timestamp="130945047810351"
     token="-7213015539023082927"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1842" />
+        duration="2371" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="1500" />
+        duration="1976" />
     <task
         name="verifier"
-        duration="329" />
+        duration="340" />
 
     <artifact
         location="C:\Mobile\workspace\ThermTrack\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="240220247195552"
+        timestamp="130945047810351"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Mobile\workspace\ThermTrack\app\build\outputs\apk\app-debug.apk"

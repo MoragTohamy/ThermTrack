@@ -133,6 +133,19 @@
             android:layout_alignRight="@+id/overlay_im"
             android:text="Start" />
 
+        <ImageView
+            android:id="@+id/imageView1Processed"
+            android:layout_width="wrap_content"
+            android:layout_height = "wrap_content"
+            android:layout_alignParentEnd = "true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="55dp"
+            android:maxWidth="400dp"
+            android:maxHeight="670dp"
+            android:cropToPadding="false"
+            android:adjustViewBounds="true"
+            android:src="@drawable/background" />
     </RelativeLayout>
 
     <RelativeLayout

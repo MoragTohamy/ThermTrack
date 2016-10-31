@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
 
@@ -47,14 +48,16 @@ import com.google.analytics.tracking.android.EasyTracker;
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
+import org.opencv.android.Utils;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
+import org.opencv.imgproc.Imgproc;
 
 import thermapp.sdk.sample.R;
 
-public class MainActivity extends Activity implements ThermAppAPI_Callback 
+public class MainActivity extends Activity implements ThermAppAPI_Callback
 {
-	private static final String  TAG = "ThermTrack::OpenCV::Activity";
+	private static final String  TAG = "ThermTrack::OpenCV";
 
 	private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
 		@Override
@@ -63,7 +66,22 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 				case LoaderCallbackInterface.SUCCESS:
 					Log.i(TAG,"OpenCV Manager Connected");
 					// Add image processing code here
-					Mat m = new Mat(5, 10, CvType.CV_8UC1);
+					Mat mat = new Mat(384, 288, CvType.CV_8UC1);
+					//int [] frame  = new int [110592];
+                   // Iterator it = hmap.entrySet().iterator();
+                 //   while (it.hasNext()){
+                  //      frame = hmap.entrySet().iterator().next().getValue();
+                //        int i =0;
+                        final ImageView iv_processed = (ImageView) findViewById(R.id.imageView1Processed);
+                        for (int r = 0; r<mat.rows(); r++){
+                            for (int c = 0; c<mat.cols(); c++){
+                                mat.put(r, c, 0);
+                            }
+                        }
+                        Bitmap temp_bmp = Bitmap.createBitmap(mat.cols(),mat.rows(), Bitmap.Config.ARGB_8888);
+                        Utils.matToBitmap(mat, temp_bmp);
+                        iv_processed.setImageBitmap(temp_bmp);
+                  //  }
 					break;
 				case LoaderCallbackInterface.INIT_FAILED:
 					Log.i(TAG,"Init Failed");
@@ -94,9 +112,9 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 	Matrix matrix_imrot_90;
 
 
-	private Runnable rnbl = new Runnable() 
+	private Runnable rnbl = new Runnable()
 	{
-		public void run() 
+		public void run()
 		{
 			iv.setImageBitmap(Bitmap.createBitmap(bmp_ptr, 0, 0,
 					bmp_ptr.getWidth(), bmp_ptr.getHeight(), matrix_imrot_90,
@@ -123,7 +141,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 	private RelativeLayout NoCam_Lay;
 	private ImageView barBck;
 
-	
+
 	/* OUR CODE */
 	private Button compose;
 	private Button startOrStopSaveFrameRawData;
@@ -131,30 +149,30 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 	@SuppressLint("UseSparseArrays") LinkedHashMap<Integer, int[]> hmap = new LinkedHashMap<Integer, int[]>();
 	int frameIndex=0;
 	private boolean isToSaveFrameRawData = false;
-	
+
 	@Override
-	public void onStart() 
+	public void onStart()
 	{
 		super.onStart();
 		EasyTracker.getInstance(this).activityStart(this);
 	}
 
 	@Override
-	public void onStop() 
+	public void onStop()
 	{
 		super.onStop();
 		EasyTracker.getInstance(this).activityStop(this);
 	}
 
 	@Override
-	public void OnFrameGetThermAppBMP(Bitmap bmp, int[] iMinMaxThresholdValues) 
+	public void OnFrameGetThermAppBMP(Bitmap bmp, int[] iMinMaxThresholdValues)
 	{
-		if (null != bmp) 
+		if (null != bmp)
 		{
 			bmp_ptr = bmp;
 			iv.post(rnbl);
 		}
-		
+
 		/*
 		 * Every callback the minimum and maximum temperatures in the frame are received.
 		 * Temperatures units are integers but treated as floats – therefore their values should be [Temperature] * 100.
@@ -163,19 +181,19 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		float max_temperature = (float)(iMinMaxThresholdValues[1]);
 		int threshold = iMinMaxThresholdValues[2];	// Grayscale switching point between B&W and color, range is [0-255].
 		*/
-		
+
 
 	}
 
 	@Override
-	public void OnFrameGetThermAppTemperatures(final int[] frame, final int w, final int h, MeasurementData measurementData) 
+	public void OnFrameGetThermAppTemperatures(final int[] frame, final int w, final int h, MeasurementData measurementData)
 	{
 		final float central_pix = (float) (frame[(w >> 1) * (h + 1)]) / 100
 				* CtoF[0] + CtoF[1];
 
-		tv_temp.post(new Runnable() 
+		tv_temp.post(new Runnable()
 		{
-			public void run() 
+			public void run()
 			{
 				DecimalFormat form = new DecimalFormat("#,##00.0°" + FerCel);
 				tv_temp.setText(form.format(central_pix));
@@ -203,22 +221,22 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 	}
 
 	@Override
-	public void onPause() 
+	public void onPause()
 	{
 		super.onPause();
 	}
 
 	@Override
-	public void onDestroy() 
+	public void onDestroy()
 	{
 		if (this.isFinishing())
 			CloseApp();
 	}
 
 	@Override
-	public void onResume() 
+	public void onResume()
 	{
-				
+
 		if (prefs.getString("listMode", "none").equals("2")) // Thermography mode
 		{
 			// Turn everything on
@@ -238,7 +256,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 				SetThermalMode_Purp();
 		}
 		else // NightVision mode
-		{ 
+		{
 			SetEnhancedMode();
 			relay_temp_cross.setVisibility(View.GONE);
 			small1.setVisibility(View.INVISIBLE);
@@ -246,20 +264,20 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 			imtst.setVisibility(View.INVISIBLE);
 			barBck.setImageResource(R.drawable.night_vision_t);
 		}
-		
-		if (prefs.getString("listUnits", "C").equals("C")) 
+
+		if (prefs.getString("listUnits", "C").equals("C"))
 		{
 			CtoF[0] = 1;
 			CtoF[1] = 0;
 			FerCel = "C";
 		}
-		else if (prefs.getString("listUnits", "C").equals("F")) 
+		else if (prefs.getString("listUnits", "C").equals("F"))
 		{
 			CtoF[0] = 1.8f;
 			CtoF[1] = 32;
 			FerCel = "F";
 		}
-		
+
 		if (null != mDeviceSdk)
 		{
 			if(!mDeviceSdk.SetIgnoringRatio(0.25f/100f))	// Set the ignoring ratio (Scale Truncation) value to 0.25%
@@ -271,7 +289,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		OpenCVLoader.initAsync(OpenCVLoader.OPENCV_VERSION_2_4_9, this, mLoaderCallback);
 	}
 
-	private void CloseApp() 
+	private void CloseApp()
 	{
 		if (null != mDeviceSdk)
 		{
@@ -281,17 +299,17 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		System.exit(0);
 	}
 
-	private boolean InitSdk() 
+	private boolean InitSdk()
 	{
 		// Create Developer SDK Instance
 		mDeviceSdk = new ThermAppAPI(this);
 
 		// Try to open usb interface
-		try 
+		try
 		{
 			mDeviceSdk.ConnectToDevice();
 		}
-		catch (Exception e) 
+		catch (Exception e)
 		{
 			// Close SDK
 			mDeviceSdk = null;
@@ -300,10 +318,10 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		return true;
 	}
 
-	private void SetEnhancedMode() 
+	private void SetEnhancedMode()
 	{
 
-		try 
+		try
 		{
 			if (null != mDeviceSdk)
 				mDeviceSdk.SetMode(Mode.Enhanced, gray_palette, Coloring_Mode.Normal);
@@ -315,9 +333,9 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		imtst.setImageBitmap(bm);
 	}
 
-	private void SetThermalMode_Col() 
+	private void SetThermalMode_Col()
 	{
-		try 
+		try
 		{
 			if (null != mDeviceSdk)
 				mDeviceSdk.SetMode(Mode.Thermography, therm_palette, Coloring_Mode.Normal);
@@ -329,9 +347,9 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		imtst.setImageBitmap(bm);
 	}
 
-	private void SetThermalMode_BW() 
+	private void SetThermalMode_BW()
 	{
-		try 
+		try
 		{
 			if (null != mDeviceSdk)
 				mDeviceSdk.SetMode(Mode.Thermography, gray_palette, Coloring_Mode.Normal);
@@ -345,7 +363,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 
 	private void SetThermalMode_Purp()
 	{
-		try 
+		try
 		{
 			if (null != mDeviceSdk)
 				mDeviceSdk.SetMode(Mode.Thermography, my_palette, Coloring_Mode.Normal);
@@ -357,7 +375,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		imtst.setImageBitmap(bm);
 	}
 
-	private int[] createPalette(int sR, int sG, int sB, int eR, int eG, int eB) 
+	private int[] createPalette(int sR, int sG, int sB, int eR, int eG, int eB)
 	{
 		int[] my_palette = new int[256];
 		float pr;
@@ -365,7 +383,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		float Green;
 		float Blue;
 
-		for (int i = 0; i < 256; i++) 
+		for (int i = 0; i < 256; i++)
 		{
 			pr = (float) i / (float) 256;
 			Red = sR * pr + eR * (1 - pr);
@@ -378,7 +396,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		return my_palette;
 	}
 
-	private void addListenerOnButtons() 
+	private void addListenerOnButtons()
 	{
 		iv = (ImageView) findViewById(R.id.imageView1);
 
@@ -404,10 +422,10 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		hypelinked.setText(Html.fromHtml(text));
 
 		settings = (ImageButton) findViewById(R.id.setting_btn);
-		settings.setOnClickListener(new View.OnClickListener() 
+		settings.setOnClickListener(new View.OnClickListener()
 		{
 			@Override
-			public void onClick(View v) 
+			public void onClick(View v)
 			{
 				Intent in = new Intent(MainActivity.this, SettingsActivity.class);
 				in.putExtra("serialnum", Integer.toString(mDeviceSdk.GetSerialNumber()));
@@ -417,11 +435,11 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		
 		/* OUR CODE */
 		compose = (Button) findViewById(R.id.printScreen);
-		compose.setOnClickListener(new View.OnClickListener() 
+		compose.setOnClickListener(new View.OnClickListener()
 		{
 			@Override
-			public void onClick(View v) 
-			{       
+			public void onClick(View v)
+			{
 				Date date= new Date();
 				timeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS").format(date.getTime());
 		    	File root = new File(media_path, "RawData/" + timeStamp);
@@ -438,13 +456,13 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 				hmap.clear();
 			}
 		});
-		
+
 		startOrStopSaveFrameRawData = (Button) findViewById(R.id.StartOrStopSaveFrameRawData);
-		startOrStopSaveFrameRawData.setOnClickListener(new View.OnClickListener() 
+		startOrStopSaveFrameRawData.setOnClickListener(new View.OnClickListener()
 		{
 			@Override
-			public void onClick(View v) 
-			{   
+			public void onClick(View v)
+			{
 				isToSaveFrameRawData = !isToSaveFrameRawData;
 				if(isToSaveFrameRawData)
 					startOrStopSaveFrameRawData.setText("Stop");
@@ -454,21 +472,21 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		});
 	}
 
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) 
+	protected void onActivityResult(int requestCode, int resultCode, Intent data)
 	{
 		if (requestCode == 1) {
-			if (resultCode == RESULT_OK) 
+			if (resultCode == RESULT_OK)
 			{
 				String result = data.getStringExtra("result");
 
-				if (result.equals("OK")) 
+				if (result.equals("OK"))
 				{
-					try 
+					try
 					{
 						mDeviceSdk.StartVideo();
 						mDeviceSdk.SetTmaxTmin(mDeviceSdk.ciAUTO_TEMP_INDICATOR, mDeviceSdk.ciAUTO_TEMP_INDICATOR);	// Sets minimum and maximum temperature to be in automatic mode
-					} 
-					catch (Exception e) 
+					}
+					catch (Exception e)
 					{
 						// Report error to use
 						AlertDialog.Builder dlgAlert  = new AlertDialog.Builder(this);
@@ -478,15 +496,15 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 						dlgAlert.setCancelable(true);
 						dlgAlert.create().show();
 					}
-					
+
 					Splash_Lay.setVisibility(View.GONE);
 				}
-				else if (result.equals("EXIT")) 
+				else if (result.equals("EXIT"))
 				{
 					CloseApp();
 				}
 			}
-			if (resultCode == RESULT_CANCELED) 
+			if (resultCode == RESULT_CANCELED)
 			{
 				CloseApp();
 			}
@@ -494,7 +512,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 	}
 
 	@Override
-	protected void onCreate(Bundle savedInstanceState) 
+	protected void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
@@ -508,19 +526,19 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
 
 		// Initializes ThermApp SDK
-		if (InitSdk() && mDeviceSdk.IsValidSerial()) 
+		if (InitSdk() && mDeviceSdk.IsValidSerial())
 		{
-			try 
+			try
 			{
 				// Start Image Processing
 				mDeviceSdk.AfterConnect();
 			}
-			catch (Exception e) 
+			catch (Exception e)
 			{
 				e.printStackTrace();
 				Toast.makeText(getApplicationContext(), "Unable to start image processing!", Toast.LENGTH_LONG).show();
 			}
-			
+
 			if (mDeviceSdk.IsThDevice())
 			{
 				Toast.makeText(getApplicationContext(), "ThermApp-TH device detected!", Toast.LENGTH_LONG).show();
@@ -528,7 +546,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 				// Switch to Thermography mode if TH device is connected
 				prefs.edit().putString("listMode", "2").commit();		// Set Thermography mode
 				prefs.edit().putString("listpalette", "1").commit();	// Set Rainbow palette
-				
+
 				SetThermalMode_Col();	// Change mode
 
 				/*
@@ -547,22 +565,22 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 				{
 					Log.e("SetMeasurementMode()","Measurement points are possibly invalid"); 
 				}
-				 */				
+				 */
 			}
-			
+
 			final Intent i = new Intent(this, WelcomeActivity.class);
 			i.putExtra("serialnum", Integer.toString(mDeviceSdk.GetSerialNumber()));
 			startActivityForResult(i, 1);
 		}
-		else 
+		else
 		{
 			NoCam_Lay.setVisibility(View.VISIBLE);
 		}
 
 		// Define USB detached event receiver
-		BroadcastReceiver mUsbReceiver = new BroadcastReceiver() 
+		BroadcastReceiver mUsbReceiver = new BroadcastReceiver()
 		{
-			public void onReceive(Context context, Intent intent) 
+			public void onReceive(Context context, Intent intent)
 			{
 				if (UsbManager.ACTION_USB_DEVICE_DETACHED.equals(intent.getAction()))
 					CloseApp();
@@ -578,26 +596,26 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		if (!folder.exists())
 			folder.mkdir();
 	}
-		
+
 	@Override
-	public void onBackPressed() 
+	public void onBackPressed()
 	{
 		CloseApp();
 		super.onBackPressed();
 	}
 
 	@Override
-	protected void onNewIntent(Intent intent) 
+	protected void onNewIntent(Intent intent)
 	{
 
-		if (Splash_Lay.getVisibility() == View.VISIBLE) 
+		if (Splash_Lay.getVisibility() == View.VISIBLE)
 		{
 			onCreate(new Bundle());
 		}
 		super.onNewIntent(intent);
 	}
-	
-	private void CreatePalettes() 
+
+	private void CreatePalettes()
 	{
 		gray_palette = new int[256];
 		for (int i = 0; i < 256; i++)
@@ -612,36 +630,36 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 			therm_palette[i]= therm_palette[i-1]+4;
 		}
 		therm_palette[32]= 0xFF0004ff;
-		for (int i=33; i<95 ;i++)	
+		for (int i=33; i<95 ;i++)
 		{
 			therm_palette[i]= therm_palette[i-1]+0x400;
 		}
 		therm_palette[95]= 0xFF00ffff;
 		therm_palette[96]= 0xFF04fffb;
-		for (int i=97; i<159 ;i++)	
+		for (int i=97; i<159 ;i++)
 		{
 			therm_palette[i]= therm_palette[i-1]+0x3FFFC;
 		}
 		therm_palette[159]= 0xFFffff00;
-		for (int i=160; i<223 ;i++)	
+		for (int i=160; i<223 ;i++)
 		{
 			therm_palette[i]= therm_palette[i-1]-0x400;
 		}
 		therm_palette[223]=0xFFfb0000 ;
-	
-		for (int i=224; i<256 ;i++)	
+
+		for (int i=224; i<256 ;i++)
 		{
 			therm_palette[i]= therm_palette[i-1]-0x40000;
-		}	
+		}
 
 		my_palette = createPalette(253, 250, 0, 86, 0, 154);
 	}
-	
+
 	/* OUR CODE */
 	public void generateNoteOnSD(File gpxfile, final int[] frame) {
 	    try {
 	        final StringBuilder sb = new StringBuilder();
-	        
+
 	        for (int degrees : frame)
     	        {
     	            sb.append(degrees);

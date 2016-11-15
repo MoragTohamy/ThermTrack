@@ -3,48 +3,48 @@
 
     <item
         is-multidex="false"
-        jar="C:\Mobile\workspace\ThermTrack\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="4f666715e420a58b0345d1a397277e8cfb4a95f8">
-        <dex dex="C:\Mobile\workspace\ThermTrack\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_60186369b59dfc440678a6d8cabbe3d2f80c6cf4.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Mobile\workspace\ThermTrack\app\libs\libGoogleAnalyticsServices.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.2"
+        revision="23.0.0"
         sha1="db1e65d9e3ee616f871cb23120fbea8f18ad3e4c">
         <dex dex="C:\Mobile\workspace\ThermTrack\app\build\intermediates\pre-dexed\debug\libGoogleAnalyticsServices_be303163f66adf3b78394fe6140e4489aa2eec88.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Mobile\workspace\ThermTrack\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.2"
-        sha1="d001271c62211330443995997003ed753e25af6e">
-        <dex dex="C:\Mobile\workspace\ThermTrack\app\build\intermediates\pre-dexed\debug\instant-run_9e8e73832408ee019c8dbdd5d422744638d88bf2.jar" />
     </item>
     <item
         is-multidex="false"
         jar="C:\Mobile\workspace\ThermTrack\app\libs\thermappsdk.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.2"
+        revision="23.0.0"
         sha1="8f7a6fad60aa8bc3305626422abfcd68b1441458">
         <dex dex="C:\Mobile\workspace\ThermTrack\app\build\intermediates\pre-dexed\debug\thermappsdk_ccab7812a620d9f2c44df2df64da1280b52a7498.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\fuele\AppData\Local\Android\Sdk\build-tools\24.0.2\renderscript\lib\renderscript-v8.jar"
+        jar="C:\Mobile\workspace\ThermTrack\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
-        revision="24.0.2"
-        sha1="05668b8cd6c7b07f152b6a5b4c6cff620817ba0f">
-        <dex dex="C:\Mobile\workspace\ThermTrack\app\build\intermediates\pre-dexed\debug\renderscript-v8_450fc25f497fcc11806f94a2fac16989329101ad.jar" />
+        revision="23.0.0"
+        sha1="dfb03a6f41ba4c51682f92f85134b2a1cb305b1b">
+        <dex dex="C:\Mobile\workspace\ThermTrack\app\build\intermediates\pre-dexed\debug\instant-run_9e8e73832408ee019c8dbdd5d422744638d88bf2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\fuele\AppData\Local\Android\Sdk\build-tools\23.0.0\renderscript\lib\renderscript-v8.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="9bb4f6db45b35f75714730d85ce4d90321077d6c">
+        <dex dex="C:\Mobile\workspace\ThermTrack\app\build\intermediates\pre-dexed\debug\renderscript-v8_ae764a0b58d31dbfa0922d0bd85b512ebbb2851d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Mobile\workspace\ThermTrack\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.0"
+        sha1="eb0dd5a425c9853cefce2972bbc6028231a2b4b9">
+        <dex dex="C:\Mobile\workspace\ThermTrack\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_60186369b59dfc440678a6d8cabbe3d2f80c6cf4.jar" />
     </item>
 
 </items>

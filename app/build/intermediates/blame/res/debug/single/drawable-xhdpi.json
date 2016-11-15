@@ -16,24 +16,24 @@
         "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\logo_sdk.png"
     },
     {
-        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\night_vision_t.png",
-        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\night_vision_t.png"
-    },
-    {
         "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\background.png",
         "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\background.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\night_vision_t.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\night_vision_t.png"
     },
     {
         "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\accept.png",
         "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\accept.png"
     },
     {
-        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\minus_icon.png",
-        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\minus_icon.png"
-    },
-    {
         "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\cursor.png",
         "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\cursor.png"
+    },
+    {
+        "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\minus_icon.png",
+        "source": "C:\\Mobile\\workspace\\ThermTrack\\app\\src\\main\\res\\drawable-xhdpi\\minus_icon.png"
     },
     {
         "merged": "C:\\Mobile\\workspace\\ThermTrack\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\settings.png",

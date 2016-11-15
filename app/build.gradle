@@ -2,7 +2,7 @@
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "24.0.2"
+    buildToolsVersion "23.0.0"
     compileOptions.encoding = 'windows-1251'
     
     sourceSets.main {

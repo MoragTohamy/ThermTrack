@@ -66,21 +66,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 				case LoaderCallbackInterface.SUCCESS:
 					Log.i(TAG,"OpenCV Manager Connected");
 					// Add image processing code here
-					Mat mat = new Mat(384, 288, CvType.CV_8UC1);
-					//int [] frame  = new int [110592];
-                   // Iterator it = hmap.entrySet().iterator();
-                 //   while (it.hasNext()){
-                  //      frame = hmap.entrySet().iterator().next().getValue();
-                //        int i =0;
-                        final ImageView iv_processed = (ImageView) findViewById(R.id.imageView1Processed);
-                        for (int r = 0; r<mat.rows(); r++){
-                            for (int c = 0; c<mat.cols(); c++){
-                                mat.put(r, c, 0);
-                            }
-                        }
-                        Bitmap temp_bmp = Bitmap.createBitmap(mat.cols(),mat.rows(), Bitmap.Config.ARGB_8888);
-                        Utils.matToBitmap(mat, temp_bmp);
-                        iv_processed.setImageBitmap(temp_bmp);
+
                   //  }
 					break;
 				case LoaderCallbackInterface.INIT_FAILED:
@@ -129,6 +115,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 	private TextView small2 = null;
 	private TextView hypelinked = null;
 	private ImageView iv = null;
+    private ImageView iv2 = null;
 	private ImageButton settings = null;
 
 	private float[] CtoF;
@@ -140,6 +127,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 	private RelativeLayout Splash_Lay;
 	private RelativeLayout NoCam_Lay;
 	private ImageView barBck;
+    private int frameCount=0;
 
 
 	/* OUR CODE */
@@ -175,7 +163,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 
 		/*
 		 * Every callback the minimum and maximum temperatures in the frame are received.
-		 * Temperatures units are integers but treated as floats – therefore their values should be [Temperature] * 100.
+		 * Temperatures units are integers but treated as floats ï¿½ therefore their values should be [Temperature] * 100.
 		 * For example, 25.70 degrees is received as 2570.
 		float min_temperature = (float)(iMinMaxThresholdValues[0]);
 		float max_temperature = (float)(iMinMaxThresholdValues[1]);
@@ -191,11 +179,33 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 		final float central_pix = (float) (frame[(w >> 1) * (h + 1)]) / 100
 				* CtoF[0] + CtoF[1];
 
+        if(frameCount++==5) {
+            FrameToMatThread converterRunnable = new FrameToMatThread(frame,iv2);
+            Thread thread = new Thread(converterRunnable);
+            thread.start();
+            frameCount=0;
+        }
+
+
+/*
+        Mat mat = new Mat(384, 288, CvType.CV_8UC1);
+
+        final ImageView iv_processed = (ImageView) findViewById(R.id.imageView1Processed);
+        for (int r = 0; r<mat.rows(); r++){
+            for (int c = 0; c<mat.cols(); c++){
+                mat.put(r, c, 0);
+            }
+        }
+
+        Bitmap temp_bmp = Bitmap.createBitmap(mat.cols(),mat.rows(), Bitmap.Config.ARGB_8888);
+        Utils.matToBitmap(mat, temp_bmp);
+        iv_processed.setImageBitmap(temp_bmp);
+*/
 		tv_temp.post(new Runnable()
 		{
 			public void run()
 			{
-				DecimalFormat form = new DecimalFormat("#,##00.0°" + FerCel);
+				DecimalFormat form = new DecimalFormat("#,##00.0ï¿½" + FerCel);
 				tv_temp.setText(form.format(central_pix));
 				if(isToSaveFrameRawData)
 					hmap.put(frameIndex++, frame);
@@ -399,6 +409,7 @@ public class MainActivity extends Activity implements ThermAppAPI_Callback
 	private void addListenerOnButtons()
 	{
 		iv = (ImageView) findViewById(R.id.imageView1);
+        iv2 = (ImageView) findViewById(R.id.imageView1Processed);
 
 		tv_temp = (TextView) findViewById(R.id.textView_temp);
 		relay_temp_cross = (RelativeLayout) findViewById(R.id.Rel_Temp_Cross);
